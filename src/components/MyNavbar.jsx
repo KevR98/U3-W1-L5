@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 const MyNavbar = () => {
   return (
     <>
-      <Navbar expand='lg' className='bg-dark' data-bs-theme='dark'>
+      <Navbar expand='lg' className='body' data-bs-theme='dark'>
         <Container fluid={true}>
           <Navbar.Brand href='#home'>
             <img
@@ -24,6 +24,12 @@ const MyNavbar = () => {
               <Nav.Link href='#'>Recently Added</Nav.Link>
               <Nav.Link href='#'>My List</Nav.Link>
             </Nav>
+            <div className='d-flex align-items-center'>
+              <i className='bi bi-search icons'></i>
+              <div className='fw-bold kids'>KIDS</div>
+              <i className='bi bi-bell icons'></i>
+              <i className='bi bi-person-circle icons'></i>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

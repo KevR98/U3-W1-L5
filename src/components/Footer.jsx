@@ -107,7 +107,12 @@ function Footer() {
           <div className='col mb-2'>
             <button
               type='button'
-              className='btn btn-sm footer-button rounded-0 mt-3'
+              className='btn btn-sm footer-button rounded-0 mt-3 text-secondary'
+              style={{
+                backgroundColor: '#221f1f',
+                border: '1px solid white',
+                padding: '0.25rem 0.5rem',
+              }}
             >
               Service Code
             </button>

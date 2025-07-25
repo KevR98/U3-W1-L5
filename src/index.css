@@ -2,9 +2,7 @@
   background-color: #221f1f;
 }
 
-h2,
-h4,
-footer {
+.footer {
   color: #f5f5f1;
 }
 
@@ -19,7 +17,7 @@ footer {
   font-size: 90%;
 }
 
-#kids {
+.kids {
   color: #f5f5f1;
   font-size: 0.8em;
 }
