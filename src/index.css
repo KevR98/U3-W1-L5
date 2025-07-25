@@ -50,10 +50,18 @@
   font-size: 0.6em;
 }
 
-.col img {
+.img {
   transition: transform 0.2s;
 }
 
-.col img:hover {
+.img:hover {
   transform: scale(1.1);
+}
+
+.img {
+  width: 100%;
+  height: 220px; /* Altezza tipica stile Netflix */
+  object-fit: cover; /* Ritaglia l'immagine per riempire il box */
+  border-radius: 4px; /* Opzionale: angoli leggermente arrotondati */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Opzionale: ombra */
 }
