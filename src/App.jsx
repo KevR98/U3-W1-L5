@@ -10,25 +10,23 @@ import Galleries from './components/Galleries';
 function App() {
   return (
     <>
-      <div className='body'>
-        <MyNavbar />
-        <div className='container-fluid px-4 testo'>
-          <Header />
-          <div className='mb-4'>
-            <Title title='Trending Now' />
-            <Galleries movie='Marvel' />
-          </div>
-          <div className='mb-4'>
-            <Title title='Watch it Again' />
-            <Galleries movie='Star Wars' />
-          </div>
-          <div className='mb-4'>
-            <Title title='New Releases' />
-            <Galleries movie='Harry Potter' />
-          </div>
+      <MyNavbar />
+      <div className='container-fluid px-4 testo'>
+        <Header />
+        <div className='mb-4'>
+          <Title title='Trending Now' />
+          <Galleries movie='Lord of Rings' />
         </div>
-        <Footer className='testo' />
+        <div className='mb-4'>
+          <Title title='Watch it Again' />
+          <Galleries movie='Fast and Furious' />
+        </div>
+        <div className='mb-4'>
+          <Title title='New Releases' />
+          <Galleries movie='Harry Potter' />
+        </div>
       </div>
+      <Footer className='testo' />
     </>
   );
 }
