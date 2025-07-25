@@ -11,13 +11,13 @@ function App() {
     <>
       <div className='body'>
         <MyNavbar />
-        <div className='container-fluid px-4 footer'>
+        <div className='container-fluid px-4 testo'>
           <Header />
           <Title title='Trending Now' />
           <Title title='Watch it Again' />
           <Title title='New Releases' />
         </div>
-        <Footer className='footer' />
+        <Footer className='testo' />
       </div>
     </>
   );
