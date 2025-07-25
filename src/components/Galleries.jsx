@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Spinner } from 'react-bootstrap';
 import SingleGalleries from './SingleGallery';
 
 const URL = 'http://www.omdbapi.com/?apikey=249cd937&s=';
@@ -7,6 +7,8 @@ const URL = 'http://www.omdbapi.com/?apikey=249cd937&s=';
 class Gallery extends Component {
   state = {
     films: [],
+    loading: true,
+    error: false,
   };
 
   getFilms = () => {
@@ -20,8 +22,8 @@ class Gallery extends Component {
       })
 
       .then((movies) => {
-        console.log(movies);
-        this.setState({ films: movies.Search });
+        // console.log(movies.Search);
+        this.setState({ films: movies.Search, loading: false });
       })
 
       .catch((err) => {
@@ -35,7 +37,12 @@ class Gallery extends Component {
 
   render() {
     return (
-      <Row className='mx-2'>
+      <Row className='mx-2 g-2'>
+        {this.state.loading && (
+          <div className='text-center'>
+            <Spinner animation='border' role='status'></Spinner>
+          </div>
+        )}
         {this.state.films.slice(0, 6).map((movie) => (
           <Col xs={6} md={4} xl={2} key={movie.imdbID}>
             <SingleGalleries movie={movie} />
